@@ -2,7 +2,7 @@
 
 Splite is a modern, mobile-first web application designed to make sharing expenses with friends and roommates seamless and fun. Built with the latest web technologies, it offers a premium user experience for managing group finances.
 
-![Banner](/path/to/screenshot.png) <!-- Add a screenshot if available -->
+![Banner](per.png) <!-- Add a screenshot if available -->
 
 ## 🚀 Features
 
