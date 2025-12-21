@@ -54,7 +54,7 @@ Splite is a modern, mobile-first web application designed to make sharing expens
     npm run dev
     ```
 
-    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    Open [Live preview ](https://splitemate2-0-frmm.vercel.app/) with your browser to see the result.
 
 ## 🤝 Contributing
 
