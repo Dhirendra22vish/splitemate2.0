@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FF6B4A;
+  --color-secondary: #FF8F73;
+  --color-accent: #34D399;
+  --color-background: #FFFAF8;
+  --color-surface: #FFFFFF;
+}
+
+:root {
+  --foreground-rgb: 23, 23, 23;
+  --background-start-rgb: 255, 107, 74;
+  /* Orange */
+  --background-end-rgb: 255, 189, 122;
+  /* Light Peach */
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(180deg, rgb(var(--background-start-rgb)) 0%, rgb(var(--background-end-rgb)) 100%);
+  min-height: 100vh;
+  font-family: var(--font-outfit), sans-serif;
+}
