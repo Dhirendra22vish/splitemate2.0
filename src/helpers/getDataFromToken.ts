@@ -8,7 +8,11 @@ export const getDataFromToken = (request: NextRequest): string => {
         if (!token) {
             throw new Error("No token found");
         }
-        const decodedToken: any = jwt.verify(token, process.env.NEXTAUTH_SECRET!);
+        const secret = process.env.NEXTAUTH_SECRET;
+        if (!secret) {
+            throw new Error("NEXTAUTH_SECRET is missing");
+        }
+        const decodedToken: any = jwt.verify(token, secret);
         return decodedToken.id;
     } catch (error: any) {
         throw new Error(error.message);
