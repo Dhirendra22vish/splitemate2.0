@@ -29,8 +29,14 @@ export async function POST(request: NextRequest) {
             email: user.email,
         };
 
+        const secret = process.env.NEXTAUTH_SECRET;
+
+        if (!secret) {
+            return NextResponse.json({ error: "NEXTAUTH_SECRET is missing in environment variables" }, { status: 500 });
+        }
+
         // Create token
-        const token = jwt.sign(tokenData, process.env.NEXTAUTH_SECRET!, { expiresIn: "1d" });
+        const token = jwt.sign(tokenData, secret, { expiresIn: "1d" });
 
         const response = NextResponse.json({
             message: "Login successful",
